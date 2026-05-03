@@ -2,9 +2,10 @@
 
 
 # TECH STACK
+```
 REACT            - Frontend
 PYTHON (FASTAPI) - Backend
-
+```
 ## 📌 Overview
 This project implements a secure **medical image steganography system** that hides sensitive medical images inside cover images using **k-bit LSB techniques**.
 
@@ -84,6 +85,7 @@ Designed for **simple and user-friendly interaction**
 ---
 
 ## 📂 Project Structure
+```
 project-root/
 │
 ├── backend/
@@ -108,28 +110,33 @@ project-root/
 ├── .vscode/                   # VS Code settings (optional)
 ├── README.md                 # Project documentation
 └── .gitignore                # Global ignore rules
-
+```
 ---
 
 ## ▶️ How to Run
 
 Command Prompt Commands (Windows)
 ### Frontend
+```
 cd frontend
 npm install
 npm start
-
+```
 App: http://localhost:3000/
 
 ### Backend
+```
 cd backend
 python -m venv myenv
 myenv\Scripts\activate.bat
 pip install -r requirements.txt
 uvicorn main:app --reload
+```
 
 App: http://127.0.0.1:8000
+
 Docs (Swagger UI): http://127.0.0.1:8000/docs
+
 Alternative docs: http://127.0.0.1:8000/redoc
 
 **🔍 Key Highlights**

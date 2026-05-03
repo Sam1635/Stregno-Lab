@@ -1,12 +1,6 @@
 # 🛡️ Securing Confidential Medical Images using Triple layer of security Frameworks
 
 
-# TECH STACK
-```
-Frontend  : React  
-Backend   : Python (FastAPI)  
-Algorithm : K-bit LSB Steganography  
-```
 ## 📌 Overview
 This project implements a secure **medical image steganography system** that hides sensitive medical images inside cover images using **k-bit LSB techniques**.
 
@@ -15,6 +9,13 @@ The system focuses on **confidentiality, integrity, and imperceptibility**, ensu
 A **React.js frontend** is developed to provide an interactive UI for embedding and extraction operations.
 
 ---
+
+# TECH STACK
+```
+Frontend  : React  
+Backend   : Python (FastAPI)  
+Algorithm : K-bit LSB Steganography  
+```
 
 ## 🚀 Features
 - 🔐 Secure image-to-image steganography  

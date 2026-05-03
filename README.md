@@ -1,4 +1,9 @@
-# 🛡️ Medical Image Steganography using LSB (React + Python)
+# 🛡️ Securing Confidential Medical Images using Triple layer of security Frameworks
+
+
+# TECH STACK
+REACT            - Frontend
+PYTHON (FASTAPI) - Backend
 
 ## 📌 Overview
 This project implements a secure **medical image steganography system** that hides sensitive medical images inside cover images using **k-bit LSB techniques**.
@@ -12,8 +17,8 @@ A **React.js frontend** is developed to provide an interactive UI for embedding 
 ## 🚀 Features
 - 🔐 Secure image-to-image steganography  
 - 🧠 Supports **1-bit, 2-bit, 3-bit LSB embedding (S-LSB, D-LSB, T-LSB)**  
-- 🔄 **Binary reversal & adjacent bit swapping** for enhanced security  
-- 🧾 **64-bit header structure** (dimensions + session key)  
+- 🔄 **Binary transformation techniques** for enhanced security  
+- 🧾 **Header structure** for information  
 - ✅ **XOR-based hashing** for data integrity verification  
 - 🌐 **React.js frontend** for user interaction  
 - ⚡ Fast and lightweight implementation  
@@ -26,7 +31,7 @@ Built using **React.js**
 **Provides:**
 - Image upload (cover & secret image)  
 - Embed & extract functionality  
-- Display of output images  
+- Display and download output images  
 
 Designed for **simple and user-friendly interaction**
 
@@ -41,8 +46,10 @@ Designed for **simple and user-friendly interaction**
 - Hash generation & verification  
 
 **Libraries Used:**
-- OpenCV  
-- NumPy  
+- FastAPI
+- NumPy
+- Uvicorn
+- Pillow
 
 ---
 
@@ -51,9 +58,8 @@ Designed for **simple and user-friendly interaction**
 ### 🔹 Embedding
 1. Convert secret image → binary  
 2. Apply:
-   - Bit reversal  
-   - Bit swapping  
-3. Add **64-bit header**  
+   - Bit transformation
+3. Add **Header**  
 4. Generate **XOR hash**  
 5. Embed using k-bit LSB  
 6. Output → **Stego Image**
@@ -71,34 +77,60 @@ Designed for **simple and user-friendly interaction**
 - **PSNR** (Image quality)  
 - **MSE / RMSE** (Distortion)  
 - **NPCR, UACI** (Security strength)  
-- **Correlation (R), SC**  
+- **Entropy** (Randomness)
+- **Correlation (R)**
+- **SC**
 
 ---
 
 ## 📂 Project Structure
-project
-│── frontend/ # React App
-│ ├── src/
-│ ├── public/
+project-root/
 │
-│── backend/ # Python scripts
-│ ├── main.py
+├── backend/
+│   ├── venv/                  # Python virtual environment
+│   ├── __pycache__/           # Compiled Python files
+│   ├── main.py                # FastAPI application entry point
+│   └── requirements.txt       # Python dependencies
 │
-│── README.md
+├── frontend/
+│   ├── node_modules/          # Installed npm packages
+│   ├── public/                # Static assets
+│   ├── src/                   # React source code
+│   │   ├── components/        # Reusable UI components
+│   │   ├── pages/             # Page-level components
+│   │   ├── App.jsx            # Main React component
+│   │   └── main.jsx           # Entry point
+│   ├── build/                 # Production build files
+│   ├── package.json           # Project metadata & dependencies
+│   ├── package-lock.json      # Dependency lock file
+│   └── .gitignore             # Ignored files
+│
+├── .vscode/                   # VS Code settings (optional)
+├── README.md                 # Project documentation
+└── .gitignore                # Global ignore rules
 
 ---
 
 ## ▶️ How to Run
 
+Command Prompt Commands (Windows)
 ### Frontend
-bash
 cd frontend
 npm install
 npm start
 
+App: http://localhost:3000/
+
 ### Backend
-pip install opencv-python numpy
-python app.py
+cd backend
+python -m venv myenv
+myenv\Scripts\activate.bat
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+App: http://127.0.0.1:8000
+Docs (Swagger UI): http://127.0.0.1:8000/docs
+Alternative docs: http://127.0.0.1:8000/redoc
 
 **🔍 Key Highlights**
 - Lightweight alternative to heavy encryption-based models
@@ -107,6 +139,6 @@ python app.py
 - Easy-to-use interface with React
 
 **📈 Future Improvements**
-- Add AES encryption layer
+- Add encryption layer
 - Deploy as cloud/web app
 - Extend to video/audio steganography

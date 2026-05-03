@@ -3,8 +3,9 @@
 
 # TECH STACK
 ```
-REACT            - Frontend
-PYTHON (FASTAPI) - Backend
+Frontend  : React  
+Backend   : Python (FastAPI)  
+Algorithm : K-bit LSB Steganography  
 ```
 ## 📌 Overview
 This project implements a secure **medical image steganography system** that hides sensitive medical images inside cover images using **k-bit LSB techniques**.
